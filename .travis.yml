@@ -1,0 +1,34 @@
+# https://github.com/acyortjs/acyortjs.github.io.git 为博客项目地址
+# https://github.com/acyortjs/theme-donob.git themes/donob 为博客主题
+# ${GH_TOKEN} 为你在 travis-ci 设置的变量
+
+language: node_js
+
+node_js: 6.0.0
+
+install:
+  - npm install acyort -g
+
+before_script:
+  - mkdir public
+  - cd public
+  - git init
+  - git pull https://github.com/enzo-yang/enzo-yang.github.io.git
+  - ls -alh
+  - pwd
+
+script:
+  - cd ../
+  - acyort init
+  - cp config.bak.yml config.yml
+  - rm config.bak.yml
+  - git clone https://github.com/acyortjs/theme-donob.git themes/donob
+  - acyort build
+
+after_script:
+  - cd public
+  - git add .
+  - git config user.name "enzo-yang"
+  - git config user.email "divisor.yang@gmail.com"
+  - git commit -m "update from travis-ci"
+  - git push https://${GH_TOKEN}@github.com/enzo-yang/enzo-yang.github.io.git master:master
