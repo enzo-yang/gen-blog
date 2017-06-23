@@ -48,7 +48,7 @@ default_category:
 
 # html output directory or child directory e.g. 'child'
 # default "/"
-public_dir:
+public_dir: public
 
 # category directory
 # default "category"
