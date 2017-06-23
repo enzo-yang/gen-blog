@@ -1,83 +1,102 @@
 # site
+# default "AcyOrt", "A Node.js blog tool powered by GitHub."
 title: 两片
 description: 我宁可喝毒药！我从没喝过酒！
-keywords:
-rss: rss.xml
-favicon: icon.png
+
+# rss
+# set false if no need rss output
+# default "rss.xml"
+rss:
 
 # site url. you can set as 'http://yoursite.com/child' if need
 # please add 'http://' or 'https://'
+# default "https://acyortjs.github.io"
 url: https://enzo-yang.github.io
 
-# comment
-disqus: enzo-yang
-
 # language
-language: en
+# base on the theme support
+# default "en"
+language:
 
 # theme
+# default "ccc45"
 theme: donob
 
 # pagination
 # set 0 if no need paging
-per_page: 10
-archives_per_page: 30
+# default 10, 30
+per_page:
+archives_per_page:
 
 # thumbnail mode
 # 1: use the first image as thumbnail and remove the image
 # 2: use the first image as thumbnail but not remove the image
-thumbnail_mode: 2
+# default 2
+thumbnail_mode:
 
-#menu
+# menu
 menu:
   Archives: /archives/
   About: /about/
+  # archives: /archives/
+  # categories: /category/
+  # tags: /tag/
 
 # category
-default_category: blog
+# default "uncategorized"
+default_category:
 
 # html output directory or child directory e.g. 'child'
-public_dir: public
+# default "/"
+public_dir:
 
 # category directory
+# default "category"
 category_dir:
 
 # tag directory
+# default "tag"
 tag_dir:
 
 # post directory
+# default "posts"
 post_dir:
 
 # archives directory
+# default "archives"
 archives_dir:
 
-# source
 # site content source
-# your github username/repository
+# your github user/repository
+# default "acyortjs", "acyortjs.github.io"
 user: enzo-yang
 repository: enzo-yang.github.io
 
-# site post authors filter
+# post authors
+# github username
 authors:
   - enzo-yang
 #  - author0
 #  - author1
 
-# GitHub access token(optional)
-# token should be separated by '#' if you push this file to GitHub
+# gitHub access token(optional)
+# token should be separated by '#' if you push this file to github
+# token: s#d46a6d65aasd8sdbn
 token: 4#cbf4db4db9df7de7be326c788aae1ae73202c16
 
 # json output
 # boolean or string
 # you can set json output path
-json: false
+# default false
+json:
 
 # dev mode
-dev: false
+# default false
+dev:
 
 # other
-# customize some settings if you need
+# customize some settings if need
 
-# duoshuo:
-# blogroll:
-#  GitHub: https://github.com
+# disqus:
+# keywords:
+# favicon:
